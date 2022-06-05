@@ -1,0 +1,334 @@
+@import url(//user.fontawesome.com/releases/v6.1.1/css/all.css);
+
+* {
+    box-sizing: border-box;
+}
+p {
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 16px;
+    }
+}
+.light-theme {
+    background: #fff;
+    color: #333;
+}
+.dark-theme {
+    background: #000;
+    color: #ddd
+}
+html[theme='dark-mode'] {
+    filter: invert(1) hue-rotate(180deg);
+}
+html[theme='dark-mode'] img {
+    filter: invert(1) hue-rotate(180deg);
+}
+@media (prefers-color-scheme: dark) {
+    html{
+        filter: invert(1) hue-rotate(180deg);
+    }
+    html img{
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+/* html {
+    transition: color 300ms;
+     background-color: 300ms;
+} */
+
+/* header */
+header {
+    width: 100%;
+    padding: 0px 4%;
+    height: 80px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+    z-index: 100;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+header ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+header li {
+    margin: 0 0 0 15px;
+}
+.link-nav {
+    margin: 0 0 0 auto;
+}
+.link-nav i {
+    font-size: 20px;
+    color: black;
+}
+@media screen and (max-width: 800px) {
+    header {
+        height: 60px;
+    }
+    header .name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .link-nav {
+        display: none;
+    }
+}
+
+/* トップに戻るボタン */
+.page_top_btn{
+    display: block;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background: #FFF;
+    border: 1px solid #999;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 85%;
+    text-decoration: none;
+    color: #333;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+.page_top_btn::before{
+    content: "";
+    display: block;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    width: 25%;
+    height: 25%;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.page_top_btn:hover{
+    opacity: 1;
+    text-decoration: none;
+}
+@media(max-width:750px){
+    .page_top_btn{
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        opacity: 1;
+        border: none;
+        background: none;
+        bottom: 10px;
+        right: 10px;
+    }
+    .page_top_btn::before{
+        bottom: 0;
+    }
+}
+
+/* body, container */
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'MS Pゴシック', 'MS PGothic', sans-serif;
+}
+.container {
+    display: table;
+    margin: auto;
+    padding: 100px 40px;
+    max-width: 1000px;
+    margin-bottom: 100px;
+}
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 100px 10px;
+        max-width: 600px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width:1000px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+
+/* profile */
+.profile {
+    display: table-cell;
+    width: 300px;
+    text-align: center;
+    vertical-align: top;
+    padding-right: 20px;
+}
+.profile .trim-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-position: 50% 0;
+    object-fit: cover;
+}
+.profile h3 {
+    font-weight: lighter;
+    color: dimgray;
+}
+.profile ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+.profile li {
+    text-align: left;
+    margin-right: 33px;
+}
+.profile li i {
+    font-size: 30px;
+    color: midnightblue;
+    display: inline-block;
+	transition: all .3s ease 0s;
+	text-decoration: none;
+}
+.profile h3 a {
+    text-decoration: none;
+}
+.profile h3 a:hover {
+    text-decoration: underline;
+}
+.profile li i:hover {
+    transform: scale(1.2);
+}
+@media screen and (max-width: 800px) {
+    .profile {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .profile br {
+        display: none;
+    }
+    .profile .trim-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .profile {
+        width: 500px;
+        padding-right: 30px;
+    }
+    .profile br {
+        display: none;
+    }
+}
+
+/* main-contents */
+.main-contents {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+    min-width: 300px;
+}
+@media screen and (max-width: 800px) {
+    .main-contents {
+        display: block;
+        padding: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* education */
+.education ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    font-size: 18px;
+}
+.education ul li {
+    position: relative;
+    padding: 0 0 0 2em;
+    margin: 0;
+}
+.education ul li::before {
+    position: absolute;
+    left: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f19d';
+    color: black;
+}
+.education ul .education-english {
+    color: gray;
+}
+@media screen and (max-width: 1000px) {
+    .education ul {
+        font-size: 16px;
+    }
+}
+
+/* footer */
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.skills {
+    width: 100%;
+    padding: 20px 50px;
+    margin: 0;
+    background-color: whitesmoke;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.skill-list {
+    display: table;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+}
+.skills .element {
+    display: table-cell;
+    width: 25%;
+    padding: 0 5px;
+}
+.skill-list .skill-icon {
+    font-size: 80px;
+}
+.skill-list .skill-text {
+    font-size: 16px;
+    color: dimgray;
+    max-width: 260px;
+    margin: auto;
+}
+@media screen and (max-width: 800px) {
+    .skills .element {
+        display: block;
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .skill-list .skill-text {
+        max-width: 90%;
+    }
+}
