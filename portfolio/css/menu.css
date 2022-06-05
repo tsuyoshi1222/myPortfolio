@@ -73,8 +73,18 @@
 
 .darkmode-layer, .darkmode-toggle {
     z-index: 500;
+    transform: translateY(-50%);
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
-    font-size: 20px;
+    font-size: 10px;
+    size: 20px;
+}
+@media screen and (min-width: 800px) {
+    .darkmode-layer, .darkmode-toggle {
+        top: 40px;
+    }
+}
+.darkmode--activated img {
+    mix-blend-mode: difference;;
 }

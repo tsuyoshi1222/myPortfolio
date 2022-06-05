@@ -13,10 +13,10 @@ p {
     }
 }
 @media (prefers-color-scheme: dark) {
-    html{
+    html {
         filter: invert(1) hue-rotate(180deg);
     }
-    html img{
+    html img {
         filter: invert(1) hue-rotate(180deg);
     }
 }
@@ -66,9 +66,9 @@ header li {
         max-width: 100%;
         max-height: 100%;
     }
-    /* .link-nav {
+    .link-nav {
         display: none;
-    } */
+    }
 }
 
 /* トップに戻るボタン */
@@ -279,7 +279,7 @@ footer {
     width: 100%;
     padding: 20px 50px;
     margin: 0;
-    background-color: whitesmoke;
+    background-color: rgb(220, 220, 220);
     align-items: center;
     text-align: center;
     vertical-align: middle;
@@ -316,8 +316,70 @@ footer {
     }
 }
 
+/* experience */
+.experience {
+    display: table;
+    width: 100%;
+    padding: 20px 10%;
+    text-align: left;
+}
+.experience h1 {
+    position: relative;
+    display: table-cell;
+    padding-right: 40px;
+    top: 0;
+    left: 0;
+}
+.experience .experience-list {
+    list-style-position: inside;
+    list-style: none;
+    display: table-cell;
+    position: relative;
+}
+.experience .experience-list::before {
+    position: absolute;
+    transform: translateY(-50%);
+    left: -40px;
+    top: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100;
+    font-size: 30px;
+    content: '\f14a';
+    color: rgb(98, 98, 255); 
+}
+.experience .factor {
+    display: block;
+    position: relative;
+    width: 600px;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    padding: 20px 30px 30px 30px;
+    text-align: left;
+}
+.experience .title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: dimgray;
+}
+.experience .explain {
+    font-size: 18px;
+    color: black;
+}
+.experience .date {
+    color: dimgray;
+    margin-bottom: 10px;
+}
+.experience .factor div {
+    margin: 0.5em;
+}
+.experience .factor ul {
+    list-style: disc;
+}
+
 /* contact */
 .contact {
+    background-color: rgb(220, 220, 220);
     padding: 20px 10%;
     text-align: left;
 }
@@ -328,7 +390,8 @@ footer {
 .contact .contact-mail {
     vertical-align: middle;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+    font-weight: lighter;
 }
 .contact a {
     color: midnightblue;
