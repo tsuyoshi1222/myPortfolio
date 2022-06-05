@@ -9,10 +9,22 @@
     <link rel="stylesheet" href="./css/menu.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/system.js"></script>
+    <script type="text/javascript" src="./js/darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        new Darkmode().showWidget();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <title>掛上剛</title>
 </head>
-<body>
+<body class="light-mode">
     <header>
         <h2 class="name">掛上剛</h2>
         <div id="hamburger">
@@ -28,6 +40,7 @@
                 <li><a href="#biography">Biography</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <nav class="nav-sm">
@@ -36,6 +49,7 @@
                 <li><a href="#biography">Biography</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <nav class="link-nav">
@@ -45,7 +59,7 @@
                 <li><a href="https://www.jp.tafsm.org/" target="_blank" rel="noopener"><i class="fa-solid fa-pen-ruler"></i></a></li>
                 <li><a href="mailto:k.tsuyoshi2000&#64;gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a></li>
             </ul>
-        </nav> 	
+        </nav>
         <a href="#" class="page_top_btn">トップへ</a>
     </header>
     <div class="container">
@@ -125,9 +139,13 @@
                 <div class="element">
                     <div class="skill-icon"><i class="fa-solid fa-utensils"></i></div>
                     <h2 class="skill-title">Cooking</h2>
-                    <div class="skill-text">料理など何かを作るクリエイティブなことが大好きです。特に料理ではレシピを見ずに想像だけで味付けをするのが楽しいです。</div>
+                    <div class="skill-text">料理など何かを作るクリエイティブなことが大好きです。特に料理ではレシピを見ずに想像だけで味付けをすることを楽しんでいます。</div>
                 </div>
             </div>
+        </div>
+        <div class="contact">
+            <h1 id="contact" name="contact">Contact</h1>
+            <span class="contact-mail"><i class="fa-solid fa-envelope"></i><a href="mailto:k.tsuyoshi2000&#64;gmail.com" target="_blank" rel="noopener">k.tsuyoshi2000@gmail.com</a></span>        </div>
         </div>
     </footer>
 </body>

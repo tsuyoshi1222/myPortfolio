@@ -68,6 +68,13 @@
         flex: 1;
         text-align: center;
         width: 100%;
-        /* border-top: solid 0.5px gray; */
     }
+}
+
+.darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
 }

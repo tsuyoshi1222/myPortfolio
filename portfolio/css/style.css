@@ -12,20 +12,6 @@ p {
         font-size: 16px;
     }
 }
-.light-theme {
-    background: #fff;
-    color: #333;
-}
-.dark-theme {
-    background: #000;
-    color: #ddd
-}
-html[theme='dark-mode'] {
-    filter: invert(1) hue-rotate(180deg);
-}
-html[theme='dark-mode'] img {
-    filter: invert(1) hue-rotate(180deg);
-}
 @media (prefers-color-scheme: dark) {
     html{
         filter: invert(1) hue-rotate(180deg);
@@ -34,10 +20,6 @@ html[theme='dark-mode'] img {
         filter: invert(1) hue-rotate(180deg);
     }
 }
-/* html {
-    transition: color 300ms;
-     background-color: 300ms;
-} */
 
 /* header */
 header {
@@ -67,7 +49,7 @@ header li {
     margin: 0 0 0 15px;
 }
 .link-nav {
-    margin: 0 0 0 auto;
+    margin: 0 60px 0 auto;
 }
 .link-nav i {
     font-size: 20px;
@@ -84,9 +66,9 @@ header li {
         max-width: 100%;
         max-height: 100%;
     }
-    .link-nav {
+    /* .link-nav {
         display: none;
-    }
+    } */
 }
 
 /* トップに戻るボタン */
@@ -287,6 +269,7 @@ body {
 }
 
 /* footer */
+/* skills */
 footer {
     width: 100%;
     bottom: 0;
@@ -330,5 +313,35 @@ footer {
     }
     .skill-list .skill-text {
         max-width: 90%;
+    }
+}
+
+/* contact */
+.contact {
+    padding: 20px 10%;
+    text-align: left;
+}
+.contact i {
+    margin: 0.5em;
+    font-size: 30px;
+}
+.contact .contact-mail {
+    vertical-align: middle;
+    font-size: 20px;
+    text-align: center;
+}
+.contact a {
+    color: midnightblue;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 800px) {
+    .contact i {
+        font-size: 26px;
+    }
+    .contact .contact-mail {
+        font-size: 18px;
     }
 }
