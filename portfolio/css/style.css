@@ -312,7 +312,7 @@ footer {
         margin: 0 auto;
     }
     .skill-list .skill-text {
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -320,7 +320,7 @@ footer {
 .experience {
     display: table;
     width: 100%;
-    padding: 20px 10%;
+    padding: 40px 10%;
     text-align: left;
 }
 .experience h1 {
@@ -336,25 +336,32 @@ footer {
     display: table-cell;
     position: relative;
 }
-.experience .experience-list::before {
+.experience .experience-list .factor::before {
     position: absolute;
     transform: translateY(-50%);
-    left: -40px;
+    left: -80px;
     top: 50%;
     font-family: "Font Awesome 5 Free";
     font-weight: 100;
     font-size: 30px;
     content: '\f14a';
-    color: rgb(98, 98, 255); 
+    color: rgb(98, 98, 255);
+}
+.experience .experience-list .going::before {
+    content: '\f0c8';
 }
 .experience .factor {
     display: block;
     position: relative;
-    width: 600px;
+    max-width: 600px;
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, .5);
     border-radius: 5px;
     padding: 20px 30px 30px 30px;
     text-align: left;
+    margin-bottom: 40px;
+}
+.experience .factor:hover {
+    box-shadow: 2px 6px 8px 2px rgba(0, 0, 0, .5);
 }
 .experience .title {
     margin-bottom: 10px;
@@ -362,9 +369,13 @@ footer {
     font-weight: bold;
     color: dimgray;
 }
-.experience .explain {
+.experience .explain a {
     font-size: 18px;
     color: black;
+    text-decoration: none;
+}
+.experience .explain a:hover {
+    text-decoration: underline;
 }
 .experience .date {
     color: dimgray;
@@ -376,11 +387,45 @@ footer {
 .experience .factor ul {
     list-style: disc;
 }
+@media screen and (max-width: 1000px) {
+    .experience {
+        display: block;
+    }
+    .experience .experience-list {
+        display: block;
+        margin: 40px 0 40px 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .experience {
+        width: 100%;
+        padding: 40px 10px;
+    }
+    .experience .experience-list .factor::before {
+        content: none;
+    }
+    .experience .experience-list {
+        padding: 0;
+    }
+    .experience .factor {
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 40px !important;
+        width: 100%;
+        margin:0;
+    }
+    .experience .factor .title {
+        font-size: 16px;
+    }
+    .experience .factor a {
+        font-size: 14px;
+    }
+}
 
 /* contact */
 .contact {
     background-color: rgb(220, 220, 220);
-    padding: 20px 10%;
+    padding: 20px 10% 60px;
     text-align: left;
 }
 .contact i {

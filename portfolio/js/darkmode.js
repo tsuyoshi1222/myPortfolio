@@ -8,10 +8,10 @@ const options = {
     buttonColorDark: '#100f2c',  // default: '#100f2c'
     buttonColorLight: '#fff', // default: '#fff'
     saveInCookies: true, // default: true,
-    label: '&#9728', // default: ''
+    label: '🌓', // default: ''
     // label: '暗',
     autoMatchOsTheme: true // default: true
 }
-  
-const darkmode = new Darkmode(options);
+
+const darkmode =  new Darkmode();
 darkmode.showWidget();
