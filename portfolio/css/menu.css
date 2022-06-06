@@ -3,7 +3,7 @@
 }
 
 /* ハンバーガーメニュー */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .nav-pc {
         display: none;
     }
@@ -81,7 +81,7 @@
     font-size: 10px;
     size: 20px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     .darkmode-layer, .darkmode-toggle {
         top: 40px;
     }
