@@ -140,20 +140,17 @@ body {
 @media screen and (min-width: 1300px) {
     .container {
         max-width: 1300px;
-        width: 100%;
     }
 }
 @media screen and (max-width: 800px) {
     .container {
         padding: 100px 10px;
         max-width: 600px;
-        width: 100%;
     }
 }
 @media screen and (800px <= width < 1000px) {
     .container {
         max-width: 800px;
-        width: 100%;
     }
 }
 
@@ -216,11 +213,11 @@ body {
         height: 250px;
     }
 }
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .profile br {
         display: inline !important;
     }
-} */
+}
 @media screen and (min-width: 1300px) {
     .profile {
         width: 500px;
@@ -286,6 +283,7 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
+    padding: 0;
 }
 .skills {
     width: 100%;
