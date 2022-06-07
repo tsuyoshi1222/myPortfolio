@@ -213,6 +213,11 @@ body {
         height: 250px;
     }
 }
+@media screen and (max-width: 500px) {
+    .profile br {
+        display: inline;
+    }
+}
 @media screen and (min-width: 1300px) {
     .profile {
         width: 500px;
