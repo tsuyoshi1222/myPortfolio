@@ -249,13 +249,15 @@ body {
 }
 
 /* education */
+.education {
+    max-width: 100%;
+}
 .education ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 400px;
     font-size: 18px;
-    max-width: 100%;
 }
 .education ul li {
     position: relative;
