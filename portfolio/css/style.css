@@ -234,9 +234,10 @@ body {
     .main-contents {
         display: block;
         padding: 0;
+        min-width: none;
         max-width: 600px;
         margin: 0 auto;
-        min-width: 100%;
+        width: 100%;
     }
 }
 
