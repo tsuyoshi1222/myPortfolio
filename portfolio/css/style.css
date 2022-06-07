@@ -148,7 +148,7 @@ body {
         max-width: 600px;
     }
 }
-@media screen and (min-width: 800px) and (max-width:1000px) {
+@media screen and (800px <= width < 1000px) {
     .container {
         max-width: 800px;
     }
